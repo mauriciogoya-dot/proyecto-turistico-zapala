@@ -1,0 +1,170 @@
+html {
+    scroll-behavior: smooth;
+} /* Estilo para el scroll suave al hacer clic en los enlaces de navegación */
+
+/* =========================================
+   1. CONFIGURACIÓN GLOBAL (Selector Universal)
+   ========================================= */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* =========================================
+   2. FONDOS Y CUERPO (Gradiente Atardecer)
+   ========================================= */
+body {
+    /* Gradiente lineal pedido para simular un atardecer: Nombres predefinidos y Hexadecimal */
+    background: linear-gradient(180deg, #ff7e5f, #feb47b, #2c3e50);
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    min-height: 100vh; /* Asegura que el gradiente cubra toda la pantalla */
+    color: #333; /* Color de texto gris oscuro (Hexadecimal) */
+    line-height: 1.6;
+}
+
+/* =========================================
+   3. CABECERA Y NAVEGACIÓN (RGBA y Elementos)
+   ========================================= */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */
+    color: white; /* Nombre predefinido */
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 25px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Organiza los botones en línea */
+    margin: 10px;
+}
+
+nav ul li a {
+    background-color: #d35400; /* Naranja (Hexadecimal) */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Selector de estado (Hover) para interactividad */
+nav ul li a:hover {
+    background-color: #e67e22;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================
+   4. SECCIONES Y CONTENIDO (Transparencias y IDs)
+   ========================================= */
+section {
+    /* Blanco con transparencia para ver el atardecer de fondo */
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px; /* Evita que el texto sea demasiado ancho en PC */
+    width: 90%;
+}
+
+/* Selector por ID específico para el inicio */
+#inicio {
+    background-color: white; /* Resalta más la sección de bienvenida */
+    border-left: 10px solid #d35400; /* Detalle decorativo de Zapala */
+}
+
+/* =========================================
+   5. TABLAS (Clases y RGB)
+   ========================================= */
+table {
+    width: 100%; /* Se adapta al ancho de la sección */
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255); /* Formato RGB */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.col-nombres {
+    width: 60%; /* Ajuste de la clase pedida */
+}
+
+th, td {
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* =========================================
+   6. FOOTER Y COMENTARIOS FINALES
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(44, 62, 80, 0.95);
+    color: white;
+    margin-top: 40px;
+}
+
+/* --- NUEVOS ESTILOS PARA EL VIDEO DE YOUTUBE --- */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra el iframe horizontalmente */
+    margin: 20px auto;       /* Agrega espacio arriba/abajo y ayuda al centrado */
+    width: 100%;
+}
+
+.video-container iframe {
+    max-width: 100%;         /* Evita que el video se desborde en pantallas chicas */
+    border-radius: 15px;     /* Le da el mismo toque redondeado que a tus otros videos */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5); /* Mantiene la estética de sombras de tu sitio */
+}
+
+/* Estilo para imágenes multimedia */
+img {
+    border-radius: 8px;
+    display: block;
+    margin: 15px auto;
+    max-width: 100%; /* Hace que las imágenes sean responsivas */
+}
+
+video {
+    display: block;
+    margin: 20px auto; /* Lo centra */
+    height: 450px;     /* Ajustamos la altura para que no sea gigante */
+    width: auto;       /* El ancho se ajusta solo para no deformarse */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Estilo del botón flotante "Volver" */
+.btn-volver {
+    position: fixed;    /* Se queda fijo en la pantalla */
+    bottom: 20px;       /* Distancia desde abajo */
+    right: 20px;        /* Distancia desde la derecha */
+    background-color: #d35400; /* El mismo naranja de tus botones */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px; /* Lo hace redondeado */
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 2000;      /* Para que siempre esté por encima de todo */
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #e67e22;
+    transform: scale(1.1); /* Se agranda un poquito al pasar el mouse */
+}
